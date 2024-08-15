@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    
+}
+
+:root{
+    --color-base:#F3F5FC;
+
+    --primary-color: #D8DFE8;
+    --secondary-color:#0A3871;
+    --terciary--color:#FFFFFF;
+    --cuarto-color:#343A40;
+    --quinto--color:#495057;
+    
+    --spacing-unit: 1rem;
+
+    --font-size-base: 2rem;
+
+    --font--Inter:"Inter", sans-serif;
+}
+
+body{
+    background-color: #F3F5FC;
+    font-family: var(--font--Inter);
+    font-size: var(--font-size-base);
+    font-weight: 400;
+}
+
+
+.logo{
+    display: flex;
+    
+    align-items:flex-start;
+    padding: 1% 0% 0% 0%;
+}
+.main__logo__img{
+    height: 7%;
+    width: 100%;
+}
+
+.main {
+    justify-content: space-between;
+    margin-bottom: 0;
+    background-color: var(--color-base);
+    display: flex;
+    width: 100%;
+   
+}
+
+
+
+.main__section {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-base);
+    padding: 1% 1% 1% 1%;
+    margin: 5% 1% 1% -3%;
+    width: 70%;
+    gap: 1%;
+}
+
+.main__section__2 {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+
+    padding: 2%;
+    margin: 2% 2% 0.5% 0%;
+    /* margin: 0.2% 2% 0.5% 0%; */
+    width: 25%;
+    height: 43rem;
+    gap: 15%;
+
+
+    border-radius: 3%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+
+#texto_base{
+    background-color:var(--color-base);
+    font-family: var(--font--Inter);
+    font-size: 2rem;
+    color: var(--secondary-color);
+    border-color: var(--color-base);
+    width: 100%; 
+    height: 29rem; 
+    resize: none; 
+    
+    /* no se vera el outline del textarea */
+    outline: none;
+
+    
+    
+}
+
+#texto_copiado{
+    
+    
+    width: 100%;
+    height: 77%;
+    resize: none;
+    font-family: var(--font--Inter);
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--quinto--color);
+
+
+    /* no se vera el outline del textarea */
+    outline: none; 
+}
+
+.main_section_texto {
+    display: flex;
+    align-items: center;
+    font-size: 0.75rem;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    height: 1.12rem;
+    gap: 0.31rem;
+    color: var(--quinto--color);
+}
+
+.botones {
+    
+    display: flex;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor padre */
+    height: 8%;
+    gap: 1.5rem;
+}
+
+.button {
+    width: 50%;
+    height: 4.19rem;
+    border-radius: 1.5rem;
+}
+
+.button_Encriptar{
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+}
+
+.button_Desencriptar{
+    background-color: var(--color-base);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.button_Copiar{
+    width: 100%;
+    height: 4.19rem;
+    
+    border: 1px solid var(--secondary-color);
+    border-radius: 1.5rem;
+    color: #0A3871;
+}
+
+
+
+.main__section__3{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+   
+    
+    
+    border-radius: 3%;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+
+
+    padding: 2%;
+    margin: 2% 2% 0.5% 0%;
+    width: 25%;
+    height: 43rem;
+
+}
+
+.main__imagen{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+    
+}
+
+.main__section_3__titulo2{
+    width: 100%;
+    height: 5%;
+
+}
+
+.main__section_3__Textos{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.main__section_3__titulo2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cuarto-color);
+}
+
+.main_section_texto2{
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--quinto--color);
+}
+
+.footer{
+    padding: 0;
+    margin: 1% 0 0 0  ;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: var(--secondary-color);
+    
+    justify-content: center;
+    color: var(--terciary--color);
+    /* padding: 1% 1% 1% 1%; */
+    
+}
+.titulo__footer{
+    
+    font-family: var(--font--Inter);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.footer__enlases{
+    margin: 1% ;
+    display: flex;
+    justify-content: center;
+    gap: 3%;
+}
+.footer__enlases__link{
+
+    color: var(--terciary--color);
+    text-decoration: none;
+   
+}
+
+
+/* Media querys */
+
+
+@media (max-width: 768px){
+    .main{
+        flex-direction: column;
+    }
+
+    .main__section{
+        padding: 5% 5% 5% 10%;
+        margin: auto;
+        width: 100%;
+    }
+    #texto_base{
+        height: 20rem;
+    }
+    .main__logo__img{
+        height: 7%;
+        width: 15%;
+    }
+
+    /* Seccion de imagen de lupa */
+
+
+    .main__section__3{
+        margin: 0%  5%  5%  7%;
+        
+        
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        
+        
+        width: 90%;
+        padding: 5% 1% 1% 1% ;
+    }
+
+    .main__imagen{
+        display: none;
+    }
+ 
+    .main__section_3__titulo2{
+        margin: 5%;
+    }
+    .main_section_texto2{
+         margin: 5%;
+    }
+
+
+     /* seccion area de texto encriptada desencriptada */
+
+     .main__section__2{
+        width: 90%;
+        margin: 0%  0%  5%  7%;
+        height: 23rem;
+     }
+
+     #texto_copiado{
+        height:60%;
+     }
+
+}
+
+
+@media(max-width: 375px){
+
+
+    .main__logo__img{
+        height: 5%;
+        width: 25%;
+    }
+
+    .main__section{
+       width: 100%;
+       height: 100%;
+    }
+    /* Botones Enc/Desc */
+    .primarios{
+        display: flex;
+        flex-direction: column;
+        width: 35rem;
+        
+        
+    }
+
+    /* Seccion_3 (Mensaje de no encontrado)*/
+    .main__section__3{
+        width: 80%;
+        margin: auto;
+        height: 10rem;
+        margin-bottom: 0%;
+    }
+    
+    .main__section_3__titulo2{
+        margin: 10% 1% 1% 1%;
+    }
+    .main_section_texto2{
+        margin: 20% 5% 5% 5%;
+    }
+
+    .footer__enlases{
+        flex-direction: column;
+    }
+
+}   
+
+
+
+
+
+
+        
+
+
+
+

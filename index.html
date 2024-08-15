@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge Encriptdor</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- <header class="header">
+        
+    </header> -->
+    <main class="main">
+        <div class="logo">
+            <img class="main__logo__img" src="./assets/Logo.png" alt="logo">
+        </div>
+        
+        
+        <section class="main__section">
+            <textarea id="texto_base" cols="30" raws="10" placeholder="Ingresa texto aqui" ></textarea>
+            <h6 class="main_section_texto"><img src="./assets/Vector (1).png" alt="">No se aceptan mayuculas ni caracteres especiales</h6>
+             <div class="botones primarios">
+                <button class="button button_Encriptar" onclick="boton_Encriptar_Texto();">Encriptar</button>
+                <button class="button button_Desencriptar" onclick="boton_Desencriptar_Texto();">Desencriptar</button>
+            </div>
+        
+        </section>
+        
+        
+        <section class="main__section__2">
+            <textarea id="texto_copiado" cols="20" raws="10" readonly></textarea>
+            <div class="botones">
+            <button class="button_Copiar" onclick="copiar_Texto();" id="copiar">Copiar</button>
+            </div>
+        
+        </section>
+
+        <section class="main__section__3">
+            <img class="main__imagen" src="./assets/Muñeco (1).png" alt="imagen_de_persona_lupa">
+            <div class="main__section_3__Textos">
+                <h6 class="main__section_3__titulo2">Ningún mensaje fue encontrado</h6>
+                <p class="main_section_texto2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            
+
+        </section>
+        
+        </main>
+
+        <footer class="footer"> 
+            <p class="titulo__footer">Jorge Riveros-2024</p>
+            <div class="footer__enlases">
+                <a  class="footer__enlases__link" href=""><img src="./assets/git (1).png" alt="icono_de_git"> GitHub</a>
+                <a class="footer__enlases__link" href=""><img src="./assets/linkedin.png" alt="icono_linkedin"> Linkedin</a>
+            </div>
+        </footer>
+    <script src="app.js"></script>
+</body>
+</html>
