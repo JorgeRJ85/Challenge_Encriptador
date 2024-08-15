@@ -265,8 +265,10 @@ body{
         height: 20rem;
     }
     .main__logo__img{
-        height: 7%;
-        width: 15%;
+        width: auto;
+        max-width: 100%;
+        /* height: 7%;
+        width: 15%; */
     }
 
     /* Seccion de imagen de lupa */
@@ -307,17 +309,25 @@ body{
 
 
 @media(max-width: 375px){
-    .main{
+    .logo{
         width: 100%;
-        height: 100%;
+        display: flex;
+         
+        padding: 0;
+        margin: 0% 0% 0% -12%;
     }
-
+    
     .main__logo__img{
-        height: 5%;
-        width: 25%;
+       
+        
+       
+        width: auto;
+        max-width: 50%;
     }
 
     .main__section{
+        padding: 1% 1% 1% 1%;
+        margin: 5% 1% 1% 5%;
        width: 100%;
        height: 100%;
     }
@@ -325,29 +335,28 @@ body{
     .primarios{
         display: flex;
         flex-direction: column;
-        width: 35rem;
+        width: 40rem;
+       
         
         
     }
 
     /* Seccion_3 (Mensaje de no encontrado)*/
     .main__section__3{
-        width: 80%;
+        width: 100%;
         margin: auto;
         height: 10rem;
         margin-bottom: 0%;
     }
     
-    .main__section_3__titulo2{
-        margin: 10% 1% 1% 1%;
-    }
-    .main_section_texto2{
-        margin: 20% 5% 5% 5%;
-    }
+    
 
     .footer__enlases{
         flex-direction: column;
     }
+
+
+   
 
 }   
 
