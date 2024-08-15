@@ -20,6 +20,8 @@ function encriptar(texto){
     texto=texto.toLowerCase();
     document.querySelector('.main__section__3').style.display = 'none';
     document.querySelector('.main__section__2').style.display = 'flex';
+
+
     let textoEncritado=texto
         .replace(/[aeiou]/g,vocales)
     return textoEncritado
@@ -95,5 +97,17 @@ function reinicio_Boton(){
 }
 
 
-//texto2.innerHTML=texto1;
-//document.getElementById("myDIV").style.display = "none";
+///////////////// Funcion de Caracteres/Asentos////////////////////////
+
+function filtradoDeCaracteres(texto){
+    caracteres=/[!?.:;+-*/<>@#$%&_-~`áéíóú]/;
+    if(caracteres.test(texto)){
+        let texto2 = document.getElementById("texto_base");
+        texto2.placeholder="Error resise su texto no deve contener caracteres especiales ni acentos";
+        return false
+        
+    }else{
+        return true
+    }
+
+}
