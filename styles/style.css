@@ -276,26 +276,20 @@ body{
         margin: 0%  5%  5%  7%;
         
         
-        height: 7rem;
+        height: 10rem;
         justify-content: center;
         align-items: center;
         
         
         width: 90%;
-        padding: 5% 1% 1% 1% ;
+        padding: 5% 1% 10% 1% ;
     }
 
     .main__imagen{
         display: none;
     }
  
-    .main__section_3__titulo2{
-        margin: 5%;
-    }
-    .main_section_texto2{
-         margin: 5%;
-    }
-
+   
 
      /* seccion area de texto encriptada desencriptada */
 
@@ -313,7 +307,10 @@ body{
 
 
 @media(max-width: 375px){
-
+    .main{
+        width: 100%;
+        height: 100%;
+    }
 
     .main__logo__img{
         height: 5%;
