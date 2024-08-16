@@ -6,7 +6,8 @@ function reinicioOcultacion(){
 
 
 
-/*  */
+
+///////////////// Funcion de Caracteres/Asentos////////////////////////
 function filtradoDeCaracteres(texto){
     let caracteres = /[.:;+\-*\/<=>@#$%^&*()_~áéíóúçÇ]/;
 
@@ -123,4 +124,3 @@ function reinicio_Boton(){
 }
 
 
-///////////////// Funcion de Caracteres/Asentos////////////////////////
