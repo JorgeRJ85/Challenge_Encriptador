@@ -1,18 +1,39 @@
+reinicioOcultacion();
 
-document.querySelector('.main__section__2').style.display = 'none';
+function reinicioOcultacion(){
+    document.querySelector('.main__section__2').style.display = 'none';
+}
+
+
 
 /*  */
+function filtradoDeCaracteres(texto){
+    let caracteres = /[.:;+\-*\/<=>@#$%^&*()_~áéíóúçÇ]/;
 
+    if(caracteres.test(texto)){
+        
+        document.querySelector("#texto_copiado").value="Error revise que su texto no tenga caracteres especiales ni asentos";
+        
+        return false;
+        
+    }else{
+        return true;
+    }
 
+}
 /////////////////////Boton de Encriptar///////////////////////
 function boton_Encriptar_Texto() {
     reinicio_Boton();
     let texto_base = document.querySelector("#texto_base").value;
+    if(filtradoDeCaracteres(texto_base)){
+        let textoEncriptado=encriptar(texto_base);
     
-    let textoEncriptado=encriptar(texto_base);
+        document.querySelector("#texto_copiado").value=textoEncriptado;
     
-    document.querySelector("#texto_copiado").value=textoEncriptado;
-
+    }else{
+        document.querySelector("#texto_copiado").value="Error revise que su texto no tenga caracteres especiales ni asentos";
+    }
+    
 }
 
 
@@ -20,11 +41,12 @@ function encriptar(texto){
     texto=texto.toLowerCase();
     document.querySelector('.main__section__3').style.display = 'none';
     document.querySelector('.main__section__2').style.display = 'flex';
-
-
     let textoEncritado=texto
         .replace(/[aeiou]/g,vocales)
     return textoEncritado
+    
+
+    
 }
 
 function vocales(vocal){
@@ -48,9 +70,13 @@ function vocales(vocal){
 function boton_Desencriptar_Texto(){
     reinicio_Boton();
     let texto_base = document.querySelector("#texto_base").value;
-    let textoDesencriptado=desencriptador(texto_base);
-
-    document.querySelector("#texto_copiado").value=textoDesencriptado;
+    if(filtradoDeCaracteres(texto_base)){
+        let textoDesencriptado=desencriptador(texto_base);
+        document.querySelector("#texto_copiado").value=textoDesencriptado;
+    }else{
+        document.querySelector("#texto_copiado").value="Error revise que su texto no tenga caracteres especiales ni asentos";
+    }
+   
 }
 
 function desencriptador(text){
@@ -98,16 +124,3 @@ function reinicio_Boton(){
 
 
 ///////////////// Funcion de Caracteres/Asentos////////////////////////
-
-function filtradoDeCaracteres(texto){
-    caracteres=/[!?.:;+-*/<>@#$%&_-~`áéíóú]/;
-    if(caracteres.test(texto)){
-        let texto2 = document.getElementById("texto_base");
-        texto2.placeholder="Error resise su texto no deve contener caracteres especiales ni acentos";
-        return false
-        
-    }else{
-        return true
-    }
-
-}
